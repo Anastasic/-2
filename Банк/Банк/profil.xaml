@@ -1,0 +1,56 @@
+﻿<Window x:Class="Банк.profil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Банк"
+        mc:Ignorable="d"
+        Title="profil" Height="650" Width="1200" WindowStartupLocation="CenterScreen"
+        MinHeight="650" MinWidth="1200" MaxHeight="650" MaxWidth="1200">
+    <Grid Background="#FFD6C6B4">
+        <Grid Margin="0,0,0.333,-0.333">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="67*"></RowDefinition>
+                <RowDefinition Height="354*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#FF511A29" Margin="0,0,0,2.667"/>
+            <TextBlock Grid.Row="0" Text="Редактирование профиля" Margin="21,35,887,20.667" FontSize="20" Foreground="White" FontFamily="Century Gothic"/>
+            <TextBlock Text="Банк    «          »" FontFamily="Century Gothic" FontSize="45" Grid.Row="0" TextAlignment="Center" Margin="453,20,391,20.667" Foreground="White"/>
+            <Image Margin="312,10,761,24.667" Source="бан.png" Stretch="Fill" Width="140" Height="84"/>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,382.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="215" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="Логин"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic"  HorizontalAlignment="Left" Margin="21,432.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="215" FontSize="16" Foreground="Black" RenderTransformOrigin="0.509,0.028" Grid.Row="1"><Run Text="Пароль"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,17.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="215" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="ФИО"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,66.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="295" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="Cериz и номер паспорта"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,118.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="Д"/><Run Text="ат"/><Run Text="а"/><Run Text=" рождения"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,170.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="215" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="П"/><Run Text="ол"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,222.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="Место "/><Run Text="жительства"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,275.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="250" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="Статус "/><Run Text="семейного положения"/><Run Text=":"/></TextBlock>
+            <TextBlock FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="21,331.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="215" FontSize="16" Foreground="Black" Grid.Row="1"><Run Text="Почта"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="lg" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="32" Margin="330,377.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center" PreviewTextInput="lo" Grid.Row="1"/>
+            <TextBox x:Name="pr" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="32" Margin="330,426.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center" PreviewTextInput="pa" Grid.Row="1"/>
+            <TextBox x:Name="lg_Copy" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="32" Margin="331,12.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center" Grid.Row="1"/>
+            <TextBox x:Name="lg_Copy1" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="33" Margin="330,60.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center" Grid.Row="1"/>
+            <TextBox x:Name="lg_Copy3" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="33" Margin="331,221.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center" Grid.Row="1"/>
+            <TextBox x:Name="lg_Copy4" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="32" Margin="330,323.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center" Grid.Row="1"/>
+            <Button Content="Изменить данные" HorizontalAlignment="Left" Margin="827,359.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="320" Click="chage" Height="55" FontFamily="Century Gothic" FontSize="22" Background="#FF7E6468" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Выход из аккаунта" HorizontalAlignment="Left" Margin="827,432.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="320" Click="exit" Height="55" FontFamily="Century Gothic" FontSize="22" Background="#FF7E6468" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Margin="776,17.333,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Состояние счёта:" VerticalAlignment="Top" Height="32" Width="199" FontFamily="Century Gothic" FontSize="20"/>
+            <TextBox HorizontalAlignment="Left" Height="30" Margin="999,19.333,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <TextBox x:Name="lg_Copy2" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="32" Margin="334,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center"/>
+        <TextBox x:Name="lg_Copy5" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="32" Margin="334,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center"/>
+        <TextBox x:Name="lg_Copy6" FontFamily="Century Gothic" HorizontalAlignment="Left" Height="32" Margin="334,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontSize="16" TextAlignment="Center"/>
+    </Grid>
+</Window>
